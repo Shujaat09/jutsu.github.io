@@ -9,20 +9,48 @@
    body {
     background-color: #c2c2c2;
 }
+    .i1 {
+    width: 100%;
+      border-radius: 9px 9px 9px 9px;
+    }
+    .card {
+      width: 300px;
+      paddding-top: 30px;
+      padding-left: 35px;
+      border-radius: 9px 9px 9px 9px;
+    }
 
     
   </style>
   <main id="main">
-      <div class="card-group">
+      
     <div class="movie">
-     <div class="card">
-        <img src="https://image.tmdb.org/t/p/w500/bZy15WXLhOflOgtQpICbgeeqzm6.jpg" alt="" class="i1">
-    <div class="txt">
-        <h3 class="display-3">
-            onjo
-        </h3>
-       </div>
+       <div class="card-group">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
     </div>
       
   </main>
@@ -52,7 +80,13 @@ const main = document.getElementById('main');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
          <div class="card-group">
-        <div class="card">
+  <div class="card">
+    <img src="${IMG_URL + profile_path}" class="i1" alt="...">
+ 
+      
+    </div>
+  </div>
+</div>
        
       
   
