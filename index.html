@@ -34,6 +34,7 @@
     
   </style>
   <main id="main">
+    <div class="card-group">
     <div class="movie">
      <div class="pp1">
         <img src="https://image.tmdb.org/t/p/w500/bZy15WXLhOflOgtQpICbgeeqzm6.jpg" alt="" class="i1">
@@ -43,6 +44,7 @@
         </h3>
     </div>
     </div>
+      </div>
   </main>
   <script>
    const API_KEY = 'api_key=baeeda532eece053e2763287f8a35741';
@@ -70,11 +72,13 @@ const main = document.getElementById('main');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
         <div class="pp1">
+        <div class="card-group">
         <img src="${IMG_URL + profile_path}" alt="${character}" class="i1">
     <div class="txt">
         <h3 class="display-3">
            ${character}
         </h3>
+    </div>
     </div>
         `
         
