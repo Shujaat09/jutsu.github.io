@@ -4,18 +4,42 @@
 </head>
 <body>
   <style>
-    img {
+   body {
+    background-color: #c2c2c2;
+}
+
+.i1 {
     width: 100%;
-    }
-    .movie {
+    border-radius: 9px 9px 0px 0px;
+}
+
+.pp1 {
+    margin-top: 22px;
+    margin-left: 55px;
     width: 300px;
-      height: auto;
-    }
+    background-color: #fff;
+    border-radius: 9px 9px 9px 9px;
+}
+.display-3 {
+   text-align: center;
+   justify-content: center;
+   padding-top: 12px;
+   padding-bottom: 22px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
     
   </style>
   <main id="main">
     <div class="movie">
-      <img src="https://shujaat09.github.io/movies.github.io/Fire.png" alt="Image"/>
+     <div class="pp1">
+        <img src="https://image.tmdb.org/t/p/w500/bZy15WXLhOflOgtQpICbgeeqzm6.jpg" alt="" class="i1">
+    <div class="txt">
+        <h3 class="display-3">
+            onjo
+        </h3>
+    </div>
     </div>
   </main>
   <script>
@@ -39,11 +63,17 @@ const main = document.getElementById('main');
       main.innerHTML = '';
       
       data.forEach(movie => {
-        const {profile_path} = movie;
+        const {profile_path, character} = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
-        <img src="${IMG_URL + profile_path}" alt="ioik"/>
+        <div class="pp1">
+        <img src="${IMG_URL + profile_path}" alt="${character}" class="i1">
+    <div class="txt">
+        <h3 class="display-3">
+           ${character}
+        </h3>
+    </div>
         `
         
         main.appendChild(movieEl);
